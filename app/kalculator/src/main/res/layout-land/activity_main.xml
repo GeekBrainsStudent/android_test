@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--test git -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -33,14 +32,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.18" />
+        app:layout_constraintGuide_percent="0.22" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/btn_guideline_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.24" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/btn_guideline_left"
@@ -61,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.96" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -90,36 +89,36 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/mr"
-        style="@style/Widget.Calc.ButtonStyle.LetterTextSize"
-        android:layout_width="@dimen/btn_width"
-        android:layout_height="@dimen/btn_height"
-        android:text="@string/mr"
-        app:layout_constraintBottom_toTopOf="@id/seven"
-        app:layout_constraintEnd_toStartOf="@id/mc"
-        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/percent" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/mc"
         style="@style/Widget.Calc.ButtonStyle.LetterTextSize"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
         android:text="@string/mc"
-        app:layout_constraintBottom_toTopOf="@id/eight"
-        app:layout_constraintEnd_toStartOf="@id/mplus"
-        app:layout_constraintStart_toEndOf="@id/mr"
-        app:layout_constraintTop_toBottomOf="@id/radic" />
+        app:layout_constraintBottom_toTopOf="@id/mr"
+        app:layout_constraintEnd_toStartOf="@id/seven"
+        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mr"
+        style="@style/Widget.Calc.ButtonStyle.LetterTextSize"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:text="@string/mr"
+        app:layout_constraintBottom_toTopOf="@id/mplus"
+        app:layout_constraintEnd_toStartOf="@id/fourth"
+        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/mc" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/backspace"
         style="@style/Widget.Calc.ButtonStyle.BS"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
-        app:layout_constraintBottom_toTopOf="@id/mplus"
-        app:layout_constraintEnd_toStartOf="@id/c"
-        app:layout_constraintStart_toEndOf="@id/radic"
-        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
+        app:layout_constraintBottom_toTopOf="@id/radic"
+        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintStart_toEndOf="@id/multiply"
+        app:layout_constraintTop_toBottomOf="@id/c" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/c"
@@ -127,9 +126,9 @@
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
         android:text="@string/c"
-        app:layout_constraintBottom_toTopOf="@id/mminus"
+        app:layout_constraintBottom_toTopOf="@id/backspace"
         app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
-        app:layout_constraintStart_toEndOf="@id/backspace"
+        app:layout_constraintStart_toEndOf="@id/divide"
         app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
 
     <com.google.android.material.button.MaterialButton
@@ -138,10 +137,10 @@
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
         android:text="@string/mplus"
-        app:layout_constraintBottom_toTopOf="@id/nine"
-        app:layout_constraintEnd_toStartOf="@id/mminus"
-        app:layout_constraintStart_toEndOf="@id/mc"
-        app:layout_constraintTop_toBottomOf="@id/backspace" />
+        app:layout_constraintBottom_toTopOf="@id/mminus"
+        app:layout_constraintEnd_toStartOf="@id/one"
+        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/mr" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mminus"
@@ -149,10 +148,10 @@
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
         android:text="@string/mminus"
-        app:layout_constraintBottom_toTopOf="@id/divide"
-        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
-        app:layout_constraintStart_toEndOf="@id/mplus"
-        app:layout_constraintTop_toBottomOf="@id/c" />
+        app:layout_constraintBottom_toTopOf="@id/btn_guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@id/zero"
+        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/mplus" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -160,20 +159,20 @@
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
         android:text="@string/radic"
-        app:layout_constraintBottom_toTopOf="@id/mc"
-        app:layout_constraintEnd_toStartOf="@id/backspace"
-        app:layout_constraintStart_toEndOf="@id/percent"
-        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
+        app:layout_constraintBottom_toTopOf="@id/percent"
+        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintStart_toEndOf="@id/minus"
+        app:layout_constraintTop_toBottomOf="@id/backspace" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/percent"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_height"
         android:text="@string/percent"
-        app:layout_constraintBottom_toTopOf="@id/mr"
-        app:layout_constraintEnd_toStartOf="@id/radic"
-        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
+        app:layout_constraintBottom_toTopOf="@id/btn_guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintStart_toEndOf="@id/plus"
+        app:layout_constraintTop_toBottomOf="@id/radic" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -184,8 +183,8 @@
         android:text="@string/seven"
         app:layout_constraintBottom_toTopOf="@id/fourth"
         app:layout_constraintEnd_toStartOf="@id/eight"
-        app:layout_constraintStart_toEndOf="@id/btn_guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/mr" />
+        app:layout_constraintStart_toEndOf="@id/mc"
+        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/eight"
@@ -196,7 +195,7 @@
         app:layout_constraintBottom_toTopOf="@id/five"
         app:layout_constraintEnd_toStartOf="@id/nine"
         app:layout_constraintStart_toEndOf="@id/seven"
-        app:layout_constraintTop_toBottomOf="@id/mc" />
+        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nine"
@@ -207,7 +206,7 @@
         app:layout_constraintBottom_toTopOf="@id/six"
         app:layout_constraintEnd_toStartOf="@id/divide"
         app:layout_constraintStart_toEndOf="@id/eight"
-        app:layout_constraintTop_toBottomOf="@id/mplus" />
+        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/divide"
@@ -215,9 +214,9 @@
         android:layout_height="@dimen/btn_height"
         android:text="@string/divide"
         app:layout_constraintBottom_toTopOf="@id/multiply"
-        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintEnd_toStartOf="@id/c"
         app:layout_constraintStart_toEndOf="@id/nine"
-        app:layout_constraintTop_toBottomOf="@id/mminus" />
+        app:layout_constraintTop_toBottomOf="@id/btn_guideline_top" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/fourth"
@@ -227,7 +226,7 @@
         android:text="@string/fourth"
         app:layout_constraintBottom_toTopOf="@id/one"
         app:layout_constraintEnd_toStartOf="@id/five"
-        app:layout_constraintStart_toStartOf="@id/btn_guideline_left"
+        app:layout_constraintStart_toEndOf="@id/mr"
         app:layout_constraintTop_toBottomOf="@id/seven" />
 
     <com.google.android.material.button.MaterialButton
@@ -258,7 +257,7 @@
         android:layout_height="@dimen/btn_height"
         android:text="@string/multiply"
         app:layout_constraintBottom_toTopOf="@id/minus"
-        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintEnd_toStartOf="@id/backspace"
         app:layout_constraintStart_toEndOf="@id/six"
         app:layout_constraintTop_toBottomOf="@id/divide" />
 
@@ -270,7 +269,7 @@
         android:text="@string/one"
         app:layout_constraintBottom_toTopOf="@id/zero"
         app:layout_constraintEnd_toStartOf="@id/two"
-        app:layout_constraintStart_toStartOf="@id/btn_guideline_left"
+        app:layout_constraintStart_toEndOf="@id/mplus"
         app:layout_constraintTop_toBottomOf="@id/fourth" />
 
     <com.google.android.material.button.MaterialButton
@@ -301,7 +300,7 @@
         android:layout_height="@dimen/btn_height"
         android:text="@string/minus"
         app:layout_constraintBottom_toTopOf="@id/plus"
-        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintEnd_toStartOf="@id/radic"
         app:layout_constraintStart_toEndOf="@id/three"
         app:layout_constraintTop_toBottomOf="@id/multiply" />
 
@@ -313,7 +312,7 @@
         android:text="@string/zero"
         app:layout_constraintBottom_toTopOf="@id/btn_guideline_bottom"
         app:layout_constraintEnd_toStartOf="@id/dot"
-        app:layout_constraintStart_toStartOf="@id/btn_guideline_left"
+        app:layout_constraintStart_toEndOf="@id/mminus"
         app:layout_constraintTop_toBottomOf="@id/one" />
 
     <com.google.android.material.button.MaterialButton
@@ -342,7 +341,7 @@
         android:layout_height="@dimen/btn_height"
         android:text="@string/plus"
         app:layout_constraintBottom_toTopOf="@id/btn_guideline_bottom"
-        app:layout_constraintEnd_toStartOf="@id/btn_guideline_right"
+        app:layout_constraintEnd_toStartOf="@id/percent"
         app:layout_constraintStart_toEndOf="@id/calc"
         app:layout_constraintTop_toBottomOf="@id/minus" />
 
